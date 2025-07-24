@@ -1,4 +1,4 @@
-export interface User {
+export interface IUser {
   id: number;
   createdAt: Date;
   updatedAt: Date;
@@ -10,7 +10,7 @@ export interface User {
   lastName?: string;
 }
 
-export type JwtUserPayload = Pick<User, 'email'> & {
+export type JwtUserPayload = Pick<IUser, 'email'> & {
   sub: number;
   iat: number;
   exp: number;
